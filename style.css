@@ -1,0 +1,268 @@
+/* repeated color values */
+:root {
+  --redForWhite: #E12619;
+  --redForBlack: #E62B1E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* setup for spacing to make main content fill viewport and get footer to appear at the bottom of the screen or below */
+html, body {
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  height: 100%;
+}
+
+main {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 140px; /* height of your footer */
+}
+
+footer {
+  min-height: 80px;
+  margin-top: 10px;
+  padding-top: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--redForWhite);
+  color: white;
+}
+
+/* reduces the default font-size in the footer */
+footer > p {
+  font-size: 12px;
+}
+
+/* Used to add extra gray background to bottom to cover whitespace when last row is gray background */
+.grayFiller {
+	height:140px;
+	width: 100%;
+	background-color: #E6E6E6;
+	position: absolute;
+	bottom: 0;
+}
+
+/* will add in content for the event name. setting up to allow for quick removal of event name from header if desired to be removed */
+.eventName:before {
+  content: "TEDxYouth";
+}
+.eventName:after {
+  content: "@St.GeorgesTech ";
+}
+
+/* add padding to rows */
+main > div > .row {
+	padding: 40px;
+}
+
+main > div > .row:first-of-type {
+	padding: 50px 40px 0px 40px;
+}
+
+main > div > .row:last-of-type {
+	padding: 40px 40px 0px 40px;
+}
+
+/* makes column height equal to row height and vertically centers content */
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* makes responsive images fit a larger amount of the parent width by default */
+.img-responsive {
+  width: 80%;
+}
+
+.width-60{
+  width: 60%;
+}
+
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.dropdown-menu {
+  font-size: 16px;
+  padding: 0;
+}
+
+.dropdown-menu li a{
+  line-height: 30px !important;
+}
+  
+/*Set height of the grid so .sidenav can be 100% (adjust as needed) 
+.row.content {height: 800px;}*/
+
+/* Set gray background color and 100% height */
+div.sidenav {
+  padding-top: 20px;
+  background-color:white;
+  height: auto;
+  overflow: auto;
+}
+
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .navbar-right{
+    float: none;
+  }
+  .row.content {height:auto;} 
+  
+}
+
+.btn-dark {
+  background-color: black;
+}
+
+.btn-link:link, .btn-link:visited {
+  color: white;
+}
+
+.btn-link:active, .btn-link:hover {
+  color: #FF6060 !important;
+}
+
+.btn-white-hover:active, .btn-white-hover:hover {
+	color: black !important;
+	background-color: white !important;
+}
+
+.navbar-toggle, .navbar-toggle:visited {
+  background-color: gray !important;
+}
+
+.navbar-toggle:active, .navbar-toggle:hover {
+  background-color: var(--redForWhite) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.navbar-inverse{
+  background-color: #000000;
+}
+
+.nav>li>a{
+  background-color: #000000 !important;
+  color: white !important;
+	font-weight: bold;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.nav>li>a:active, .nav>li>a:hover{
+  background-color: white !important;
+  color: black !important;
+}
+
+ul.dropdown-menu>li>a{
+  background-color: white !important;
+  color: black !important;
+}
+
+ul.dropdown-menu>li>a:hover{
+  background-color: white !important;
+  color:var(--redForWhite) !important;
+	font-weight: bold;
+}
+
+.active > a, .active > a:link, .active > a:visited {
+  color: var(--redForWhite) !important;
+	background-color: white !important;
+}
+
+.btn-break{
+  background-color: white;
+}
+
+b {
+  color: var(--redForWhite);
+}
+
+.redOnGray {
+  color: #C12115;
+}
+
+.redOnWhite {
+  color: var(--redForWhite);
+  background-color: white;
+}
+
+.redOnBlack {
+  color: var(--redForBlack);
+  background-color: black;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-default {
+	background-color: var(--redForWhite);
+	color: white;
+}
+
+.gray {
+	background-color: #E6E6E6;
+}
+
+.padding-10 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.padding-bottom-10 {
+	padding-bottom: 10px;
+}
+
+.padding-top-40 {
+	padding-top: 40px;
+}
+
+.thumbnail {
+  padding: 0 0 30px 0;
+  margin: 20px;
+	border-radius: 20px;
+	background-color: #e6e6e6;
+	color: black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thumbnail img {
+	border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
